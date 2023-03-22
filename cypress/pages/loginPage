@@ -1,0 +1,35 @@
+"use strict";
+import baseCommands from "../pages/baseCommands";
+class loginPage{
+    constructor(){
+        this.userName = "input#user-name";
+        this.userPass = "input#password";
+        this.btnLogin = "[data-test=\"login-button\"]";
+    }
+
+    clickLogin = (user, pass) =>{
+        this.setUserField(user);
+        this.setPassField(pass);
+        this.clickBtnLogin(this.btnLogin)
+    }
+
+    setUserField(user){
+        if (arguments.length === 1 && typeof user === "string"){
+            cy.get(this.userName).clear().type(user);
+
+        } else {
+            throw new Error("Argument length not supported");
+        }
+    }
+    setPassField(pass){
+        if (arguments.length === 1 && typeof pass === "string"){
+            cy.get(this.userPass).clear().type(pass);
+        } else {
+            throw new Error("Argument length not supported");
+        }
+    }
+    clickBtnLogin(locator){
+        cy.get(locator).click();
+    }
+}
+module.exports = new loginPage();
