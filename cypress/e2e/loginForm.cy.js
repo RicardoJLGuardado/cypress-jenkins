@@ -2,12 +2,12 @@
 import loginPage from "../pages/loginPage";
 
 describe('login test', () => {
-
+  beforeEach(()=>{
+    cy.visit('/')
+  })
   it('make the login', () => {
-    cy.visit('https://www.saucedemo.com/');
-    const user = "standard_user";
-    const pass = "secret_sauce";
-    console.log(user + pass)
-    loginPage.clickLogin(user, pass);
+    loginPage.setUserField("standard_user")
+    loginPage.setPassField("secret_sauce")
+    loginPage.clickBtnLogin()
   })
 })
