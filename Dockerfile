@@ -14,3 +14,7 @@ RUN  npm install
 ENTRYPOINT [ "npx","cypress","run" ]
 #with  CMD
 CMD [ "" ]
+
+
+#first build: docker build -t {nombre de la imagen}:{nombre de la tag a utilizar}
+#to run docker :docker run -it -v $PWD/cypress-jenkins cypress-jenkins:12.0.8
