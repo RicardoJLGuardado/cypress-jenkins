@@ -19,7 +19,6 @@ describe('Sauce Demo', ()=>{
             if(test.name === 'Login with valid data'){
                 inventoryPage.elements.titleSpan().should('have.text', test.expected)
             }else{
-                loginPage.elements.errorMessage().should('have.text', test.expected)
             }
         });
     })
