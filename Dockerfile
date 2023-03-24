@@ -17,4 +17,5 @@ CMD [ "" ]
 
 
 #first build: docker build -t {nombre de la imagen}:{nombre de la tag a utilizar}
-#to run docker :docker run -it -v $PWD/cypress-jenkins cypress-jenkins:12.0.8
+#to run docker :docker run -it -v $PWD/{nombre de la carpeta del proyecto} {nombre de la imagen}:{nombre de la tag a utilizar}
+#                                       
