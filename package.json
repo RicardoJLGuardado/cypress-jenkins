@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "cypress:open": "cypress open --headed",
-    "cypress:runChrome": "cypress run --headed --browser chrome --spec cypress/e2e/*"
+    "cypress:open": "cypress open",
+    "cypress:runChrome": "cypress run --headed --browser chrome --spec cypress/e2e/*",
+    "cypress:browserstack":"browserstack-cypress run --sync --spec cypress/e2e/*.js"
   },
   "author": "",
   "license": "ISC",
