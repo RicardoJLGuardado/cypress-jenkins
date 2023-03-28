@@ -7,7 +7,7 @@ describe('login test', () => {
   })
   it('make the login', () => {
     loginPage.setUserField("standard_user")
-    loginPage.setPassField("secret_sauce")
+    loginPage.setPassField("secret_sauces")
     loginPage.clickBtnLogin()
   })
 })
