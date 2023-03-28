@@ -6,7 +6,8 @@
   "scripts": {
     "test": "test",
     "cypress:open": "cypress open",
-    "cypress:runChrome": "cypress run --headed --browser chrome --spec cypress/e2e/*",
+    "cypress:chrome": "cypress run --headed --browser chrome --spec cypress/e2e/*",
+    "cypress:firefox": "cypress run --headless --browser firefox  --spec cypress/e2e/*",
     "cypress:browserstack":"browserstack-cypress run --sync --spec cypress/e2e/*.js"
   },
   "author": "",
@@ -16,3 +17,4 @@
     "cypress-mochawesome-reporter": "^3.3.0"
   }
 }
+
