@@ -1,9 +1,29 @@
-pipeline{
+pipeline {
     agent any
-
-    parameters{
-        string (name : "SPEC", defaultValue: "cypress/e2e/**/**")
+    
+    parameters {
+        string(name: "SPEC", defaultValue: "cypress/e2e/**", description: "Execution of all test")
+        choice(name: "BROWSER", choices: ["chrome", "firefox", "electron"], description:"choose the browser where you want to execute")
 
     }
-
+    options{
+        ansiColor("xterm")
+    }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
